@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fire Notes</title>
-
     <!--MAYBE DELETE <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
@@ -13,7 +12,6 @@
       body {
           font-family: 'Open Sans';
       }
-
       img {
           padding: 5px;
           border: 1px solid #ccc;
@@ -27,29 +25,42 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
   </head>
   <body>
-
     <section class="hero is-fullheight is-default is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="columns is-vcentered">
                     <div class="column is-6 is-offset-3">
                         <h1 class="title is-2">
-                            Welcome to 🔥Fire Notes📝!
+                            Welcome to :fire:Fire Notes:memo:!
                         </h1>
                         <h2 class="subtitle is-4">
                             Log in to view your notes or create a new one. 
                         </h2>
                         <br>
                         <p class="has-text-centered">
-                            <a class="button is-medium is-info is-outlined">
-                                Sign In
+                            <a class="button is-medium is-info is-outlined" onclick="signIn()">
+                                Sign In with Google
                             </a>
                         </p>
                     </div>
                 </div>
             </div>
+            <div class='signup'>
+                <h3>Or</h3>
+                <h3>Sign up with username and password</h3>
+                <input placeholder='username' id="username" type="text">
+                <input placeholder="Password" id='password' type="password">
+                <button onclick="signupwithusername()">Sign Up</button>
+            </div>
         </div>
     </section>
-    
+    <script src="js/signIn.js"></script>
   </body>
 </html>
+<style>
+    .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+    </style>
